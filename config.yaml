@@ -4,6 +4,8 @@ title: Fish Detection App
 theme: fresh
 
 googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...
+enableRobotsTXT: true
+publishDir: "docs"
 # Disables warnings
 disableKinds:
 - taxonomy
