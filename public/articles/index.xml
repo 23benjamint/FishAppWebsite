@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on Fish Detection App</title>
+    <link>https://23benjamint.github.io/fishapp/articles/</link>
+    <description>Recent content in Articles on Fish Detection App</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://23benjamint.github.io/fishapp/articles/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Features</title>
+      <link>https://23benjamint.github.io/fishapp/articles/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://23benjamint.github.io/fishapp/articles/features/</guid>
+      <description>App Features This mobile app would recognize the species of fish through the input of an image given by the user. This interface utilizes a neural network to train itself to understand each image.
+First press select to capture an image that will be used as an input
+The Detect button will create a box where the fish is and the species name
+  Before Detect Screenshot      Fish Detected Screenshot      Fish Wiki Page Screenshot     To know more information about the fish, click Fish Info after clicking the Detect Button</description>
+    </item>
+    
+    <item>
+      <title>How it works</title>
+      <link>https://23benjamint.github.io/fishapp/articles/how_it_works/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://23benjamint.github.io/fishapp/articles/how_it_works/</guid>
+      <description>Fish Dataset Yolo v5 Pytorch mobile app </description>
+    </item>
+    
+  </channel>
+</rss>

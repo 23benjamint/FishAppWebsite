@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+	<meta name="generator" content="Hugo 0.68.3" />
+    
+
+<meta property="og:title" content="Fish Detection App" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://23benjamint.github.io/fishapp/" />
+
+
+
+<meta name="description" content="Hardcoded description; the author should update :)" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fish Detection App</title>
+    
+<link rel="icon" type="image/png" href="/fishapp/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/fishapp/css/style.min.dfd11fd6ba0ed8b67b54f057a0a1146d7c2395f560fe1e8a1aaec8fe49347254.css" integrity="sha256-39Ef1roO2LZ7VPBXoKEUbXwjlfVg/h6KGq7I/kk0clQ=">
+<link rel="stylesheet" type="text/css" href="/fishapp/css/icons.css">
+
+  </head>
+  <body>
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+
+    
+    
+    <section class="hero is-fullheight is-default is-bold">
+  
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/fishapp">
+        <img src="/fishapp/images/logos/fishicon.jpg" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-mobile">
+            <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+              <svg width="1000px" height="1000px">
+                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path class="path2" d="M 300 500 L 700 500"></path>
+                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+              <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="/fishapp/articles/features" class="navbar-item is-secondary">
+            Features
+          </a>
+          <a href="/fishapp/articles/how_it_works" class="navbar-item is-secondary">
+            How it works
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+  
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/fishapp">
+        <img src="/fishapp/images/logos/fishicon.jpg" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+      <div class="navbar-start">
+        <a class="navbar-item is-hidden-mobile">
+          <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+              <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+              <path class="path2" d="M 300 500 L 700 500"></path>
+              <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+            </svg>
+            <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a href="/fishapp/articles/features" class="navbar-item is-secondary">
+          Features
+        </a>
+        <a href="/fishapp/articles/how_it_works" class="navbar-item is-secondary">
+          How it works
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
+  
+<div class="hero-body">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column is-5 is-offset-1 landing-caption">
+        <h1 class="title is-1 is-bold is-spaced">
+          Fish Detection App for Android
+        </h1>
+        
+        <h2 class="subtitle is-5 is-muted">
+          Android app for fish recognition, and highlight the fish location with bounding box
+        </h2>
+        
+        <p>
+          <a class="button cta rounded primary-btn raised" href="https://drive.google.com/uc?export=download&amp;id=1OZALcdehU8mXdjzNWX7Zq-w6LHGUYeMV">
+            Download Android App
+          </a>
+        </p>
+      </div>
+      <div class="column is-5 is-offset-1">
+        <figure class="image">
+          <img src="/fishapp/images/screenshots/DetectedFish.png" alt="Mobile App ScreenShot">
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    
+
+    
+    
+<section class="section section-feature-grey is-medium">
+  <div class="container">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2">Awesome Features</h2>
+      <h3 class="subtitle is-5 is-muted">know your fish with a snap</h3>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns">
+        <div class="column is-one-third">
+          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+            <div class="card-title">
+              <h4>Fish type recognition</h4>
+            </div>
+            <div class="card-icon">
+                <img src="/fishapp/images/illustrations/icons/recognition.png">
+            </div>
+            <div class="card-text">
+                <p>detect the fish location in an image</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+            <div class="card-title">
+              <h4>Fish location</h4>
+            </div>
+            <div class="card-icon">
+                <img src="/fishapp/images/illustrations/icons/bounding.png">
+            </div>
+            <div class="card-text">
+                <p>detect the fish location in an image, and put bounding box around it</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+            <div class="card-title">
+              <h4>Wiki page of the fish</h4>
+            </div>
+            <div class="card-icon">
+                <img src="/fishapp/images/illustrations/icons/wiki.png">
+            </div>
+            <div class="card-text">
+                <p>when click on the info button, a wiki page for the fish pops up</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+    
+    
+<section class="section is-medium">
+  <div class="container">
+    <div class="is-9">
+      <h1 class="title section-title">How it works</h1>
+    </div>
+    <div class="is-9 mt-50">
+      <article class="media icon-box">
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img src="/fishapp/images/illustrations/icons/laptop-globe.svg">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <span class="icon-box-title">Trained on large fish dataset</span>
+              <span class="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="media icon-box">
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img src="/fishapp/images/illustrations/icons/doc-sync.svg">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <span class="icon-box-title">Using Yolov5 object detection model</span>
+              <span class="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="media icon-box">
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img src="/fishapp/images/illustrations/icons/mobile-feed.svg">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <span class="icon-box-title">Using pytorch mobile, can detect fishes without internet</span>
+              <span class="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</span>
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+    
+
+    
+    
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="footer-logo">
+          <img src="/fishapp/images/logos/fishicon.jpg">
+        </div>
+      </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Code and Datasets</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="https://github.com/23benjamint/FishDataNeuralNetwork">
+                  Code for conversion
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/datasets/aungpyaeap/fish-market">
+                  Dataset for Fish recognition
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Admin guide
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Developers
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Articles</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/fishapp/articles/features">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="/fishapp/articles/how_it_works">
+                  How it works
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3></h3>
+            <nav class="level is-mobile">
+              <div class="level-left">
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    
+    
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="/fishapp/images/logos/fresh-square.svg">
+    <a class="sidebar-close" href="javascript:void(0);">
+      <i data-feather="x"></i>
+    </a>
+  </div>
+  <div class="inner">
+    <ul class="sidebar-menu">
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-envelope"></span>
+          Messages
+        </a>
+        <ul>
+          <li>
+            <a href="/fishapp">
+              Inbox
+            </a>
+          </li>
+          <li>
+            <a href="/fishapp">
+              Compose
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-image"></span>
+          Images
+        </a>
+        <ul>
+          <li>
+            <a href="/fishapp">
+              Library
+            </a>
+          </li>
+          <li>
+            <a href="/fishapp">
+              Upload
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-cog"></span>
+          Settings
+        </a>
+        <ul>
+          <li>
+            <a href="/fishapp">
+              User settings
+            </a>
+          </li>
+          <li>
+            <a href="/fishapp">
+              App settings
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+    
+    
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    
+    
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="/fishapp/images/logos/fresh-square.svg">
+    <a class="sidebar-close" href="javascript:void(0);">
+      <i data-feather="x"></i>
+    </a>
+  </div>
+  <div class="inner">
+    <ul class="sidebar-menu">
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-envelope"></span>
+          Messages
+        </a>
+        <ul>
+          <li>
+            <a href="/fishapp">
+              Inbox
+            </a>
+          </li>
+          <li>
+            <a href="/fishapp">
+              Compose
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-image"></span>
+          Images
+        </a>
+        <ul>
+          <li>
+            <a href="/fishapp">
+              Library
+            </a>
+          </li>
+          <li>
+            <a href="/fishapp">
+              Upload
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-cog"></span>
+          Settings
+        </a>
+        <ul>
+          <li>
+            <a href="/fishapp">
+              User settings
+            </a>
+          </li>
+          <li>
+            <a href="/fishapp">
+              App settings
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/fishapp/js/fresh.js"></script>
+<script src="/fishapp/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </body>
+</html>

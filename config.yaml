@@ -1,0 +1,125 @@
+baseURL: "https://23benjamint.github.io/fishapp"
+languageCode: en-us
+title: Fish Detection App 
+theme: fresh
+
+googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...
+# Disables warnings
+disableKinds:
+- taxonomy
+- taxonomyTerm
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows you to write raw html in your md files
+
+params:
+  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+  openGraph: true
+  # Used as meta data; describe your site to make Google Bots happy
+  description:
+  navbarlogo:
+  # Logo (from static/images/logos/___)
+    image: logos/fishicon.jpg
+    link: /fishapp
+  font:
+    name: "Open Sans"
+    sizes: [400,600]
+  hero:
+    # Main hero title
+    title: Fish Detection App for Android
+    # Hero subtitle (optional)
+    subtitle: Android app for fish recognition, and highlight the fish location with bounding box
+    # Button text
+    buttontext: Download Android App
+    # Where the main hero button links to
+    buttonlink: "https://drive.google.com/uc?export=download&id=1OZALcdehU8mXdjzNWX7Zq-w6LHGUYeMV"
+    # Hero image (from static/images/___)
+    image: screenshots/DetectedFish.png
+    # Footer logos (from static/images/logos/clients/___.svg)
+
+  # Customizable navbar. For a dropdown, add a "sublinks" list.
+  navbar:
+
+  - title: Features
+    url: /fishapp/articles/features
+  - title: How it works
+    url: /fishapp/articles/how_it_works
+  sidebar:
+    # Logo (from /images/logos/___.svg)
+    logo: fresh-square
+    sections:
+    - title: Messages
+      icon: envelope
+      links:
+      - text: Inbox
+        url: /fishapp
+      - text: Compose
+        url: /fishapp
+    - title: Images
+      icon: image
+      links:
+      - text: Library
+        url: /fishapp
+      - text: Upload
+        url: /fishapp
+    - title: Settings
+      icon: cog
+      links:
+      - text: User settings
+        url: /fishapp
+      - text: App settings
+        url: /fishapp
+  section1:
+    title: Awesome Features
+    subtitle: know your fish with a snap
+    tiles:
+    - title: Fish type recognition
+      icon: recognition.png
+      text: detect the fish location in an image
+      url: /fishapp
+    - title: Fish location
+      icon: bounding.png
+      text: detect the fish location in an image, and put bounding box around it
+      url: /fishapp
+    - title: Wiki page of the fish
+      icon: wiki.png
+      text: when click on the info button, a wiki page for the fish pops up
+      url: /fishapp
+  section2:
+    title: How it works
+    subtitle: user manual
+    features:
+    - title: Trained on large fish dataset
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+      # Icon (from /images/illustrations/icons/___.svg)
+      icon: laptop-globe
+    - title: Using Yolov5 object detection model
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+      icon: doc-sync
+    - title: Using pytorch mobile, can detect fishes without internet
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+      icon: mobile-feed
+
+  footer:
+    # Logo (from /images/logos/___)
+    logo: fishicon.jpg
+    quicklinks:
+      column1:
+        title: "Code and Datasets"
+        links:
+        - text: Code for conversion
+          link: https://github.com/23benjamint/FishDataNeuralNetwork
+        - text: Dataset for Fish recognition
+          link: https://www.kaggle.com/datasets/aungpyaeap/fish-market
+        - text: Admin guide
+          link: /
+        - text: Developers
+          link: /
+      column2:
+        title: "Articles"
+        links:
+        - text: Features
+          link: /fishapp/articles/features
+        - text: How it works
+          link: /fishapp/articles/how_it_works
