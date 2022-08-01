@@ -22,7 +22,7 @@ The Detect button will create a box where the fish is and the species name
    {{< figure src="/fishapp/images/screenshots/DetectedFish.png?raw=true" width="80%" height="80%" title="Fish Detected Screenshot" >}}
   </div>
   <div class="column">
-   {{< figure src="/fishapp/images/screenshots/FishWiki.png?raw=true" width="80%" height="80%" title="Fish Wiki Page Screenshot" >}}
+   {{< figure src="/fishapp/images/screenshots/WikiFish.png?raw=true" width="80%" height="80%" title="Fish Wiki Page Screenshot" >}}
   </div>
 </div>
 
